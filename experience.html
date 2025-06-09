@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My Personal Websites</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		html, body {
+  			font-family: Roboto, sans-serif;
+  			margin: 0;
+  			padding: 0;
+  			background-color: #FFFFFF;
+  			overflow-x: hidden;
+		}
+		.dark-mode {
+			background-color:#303841;
+      		color: #FFFFFF;
+		}
+		header {
+			background-color:#004369;
+			color:white;
+			padding:05px;
+			text-align:center;
+		}
+		.dark-mode header {
+			background-color: #222831;
+		}
+		nav {
+			text-align:center;
+			margin:20px 0;
+		}
+		nav a {
+			margin:0 15px;
+			text-decoration:none;
+			color:#4980AA;
+			font-weight:bold;
+		}
+		.dark-mode nav a {
+      		color: #AAD1E6;
+      	}
+		section {
+			padding:20px;
+			margin:20px auto;
+			max-width:800px;
+			border:1px solid #000000;
+			border-radius:5px;
+			background-color:#FFFFFF;
+		}
+		.dark-mode section {
+      		background-color: #3A4750;
+      		border-color: #AAAAAA;
+      	}
+		img {
+  			border:5px solid #004369;
+  			display:block;
+  			margin-left:auto;
+ 			margin-right:auto;
+ 			float:left;
+ 		}
+ 		.dark-mode img {
+      		border-color: #888;
+      	}
+ 		table {
+			font-family:arial,sans-serif;
+			border-collapse:collapse;
+			text-align:center;
+			width:50%;
+		}
+		td,th {
+			border:1px solid #000000;
+			text-align:center;
+			padding:8px;
+		}	
+		tr:hover {
+			background-color:#4980AA;
+		}
+		.dark-mode tr:hover {
+      		background-color: #6499C5;
+      	}
+		footer {
+			text-align:center;
+			padding:16px;
+			background-color:#004369;
+			color:white;
+			width:100%;
+			position:relative;
+			clear:both;
+      	}
+		@keyframes scrollLeft {
+			0% {
+				transform:translateX(100%);
+			}
+			100% {
+				transform:translateX(-100%);
+			}
+		}
+		.animated-text {
+			white-space:nowrap;
+			display:inline-block;
+			animation:slideRightToLeft 5s linear infinite;
+			font-size:24px;
+			color:#000000;
+		}
+		.dark-mode .animated-text {
+      		color: #FFFFFF;
+      	}
+		.text-container {
+			overflow:hidden;
+			width:100%;
+			border:1px solid #ddd;
+			padding:10px;
+		}
+			a {
+			text-decoration:none;
+			display:inline-block;
+			padding:8px 16px;
+		}
+		a:hover {
+			background-color:#4980AA;
+			color:#FFFFFF;
+		}
+		.bottom-buttons {
+			margin-top:auto;
+			display:flex;
+			justify-content:center;
+			gap:20px;
+			padding:20px;
+		}
+		.previous, .next{
+			background-color:#ddd;
+			color:#004369;
+			padding: 10px 20px;
+			text-decoration:none;
+			border-radius:5px;
+			font-weight:bold;
+			transition:0.3s ease;
+		}
+		.dark-mode .previous, .dark-mode .next {
+      		background-color: #555;
+      		color: #FFFFFF;
+      	}
+		.previous:hover, .next:hover {
+			background-color:#4980AA;
+			color:white;
+		}
+		.container {
+			width:100%;
+			position:relative;
+		}
+		.moving-image {
+			top:50%;
+			transform:translateY(-50%);
+			width:150px;
+			animation:moveLeft 10s linear infinite;
+		}
+		.moving-images-container {
+			overflow: hidden;
+     		white-space: nowrap;
+		    width: 100%;
+		    background-color:#FFFFFF;
+		    padding: 20px 0;
+		}
+		.dark-mode .moving-images-container {
+      		background-color: #303841;
+      	}
+		.image-track {
+      		display: flex;
+      		animation: scrollLeft 25s linear infinite;
+      		gap:20px;
+      	}
+      	.image-track img {
+		    height: 300px;
+		    flex-shrink:0;
+		    border-radius: 10px;
+		    border: transparent;
+		    box-shadow:0 4px 8px rgba(0, 0, 0, 0.3);
+		    transition: transform 0.3s, box-shadow 0.3s;
+    	}
+    	.image-track:hover {
+  			transform: scale(1.03);
+  			box-shadow:0 6px 12px rgba(0, 0, 0, 0.4);
+		}
+		.box {
+			background-color:#FFFFFF;
+			padding:05px;
+			border-radius:20px;
+			border:5px solid #4980AA;
+			flex:1 1 300px;
+			margin-bottom:10px;
+			max-width:650px;
+			text-align:center;
+		}
+		.dark-mode .box {
+			background-color:#303841;
+			color:#FFFFFF;
+		}
+		.internship-heading {
+  			text-align: center;
+  			font-family: Verdana;
+  			color: #004369;
+		}
+		.dark-mode .internship-heading {
+  			color: white;
+		}
+	</style>
+</head>
+<body>
+	<header style="background-color: #004369; color: white; padding: 05px; text-align: center;">
+  		<h1 id="typing"></h1>
+	</header>
+
+	<script>
+  		const text = "WELCOME TO MY PERSONAL WEBSITE";
+  		let i = 0;
+  		function typeWriter() {
+    	if (i < text.length) {
+      	document.getElementById("typing").innerHTML += text.charAt(i);
+      	i++;
+      	setTimeout(typeWriter, 100);
+    	}
+  	}
+  	typeWriter();
+	</script>
+
+	<div class="navbar">
+		<ul>
+				<li><a href="index 1.html">About Me</a></li>
+				<li><a href="biodata.html">Biodata</a></li>
+				<li><a href="experience.html">Experience</a></li>
+				<li><a href="education.html">Education</a></li>
+				<li><a href="family.html">Family</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<br>
+	<center>
+		<button onclick="toggleTheme()">Change to Dark Mode</button>
+		<script>
+			function toggleTheme() {
+  			document.body.classList.toggle("dark-mode");
+			}
+		</script>
+
+		<style>
+			.dark-mode {
+  			background-color:#303841;
+  			color:white;
+			}
+		</style>
+	</center>	
+<br>
+	<h3 class="internship-heading">My Internship Experience</h3>
+
+	<div class="moving-images-container">
+		<div class="image-track">
+			<img src="image/int1.jpg" alt="Moving Image 1">
+			<img src="image/int2.jpg" alt="Moving Image 2">
+			<img src="image/int3.jpg" alt="Moving Image 3">
+			<img src="image/int4.jpg" alt="Moving Image 4">
+			<img src="image/int5.jpg" alt="Moving Image 5">
+		</div>
+	</div>
+<br>
+	<center>
+	<div class="box">	
+		<h4 style="text-align:center; font-family:Roboto;">
+			In semester four, I did two months of industrial training at the Malaysian Anti-Corruption<br> 
+			Commission (MACC). There, I worked under the supervision of the Administration and<br>
+			Financial Division, where I did a variety of jobs including filing, record-keeping, minute<br>  
+			writing and others.  During my time there, I had a variety of fresh and exciting experiences.<br>
+		</h4>
+	</div>
+	</center>
+<br>
+	<center>
+		<div class="bottom-buttons">
+		<a href="biodata.html" class="previous">&laquo; Previous</a>
+		<a href="education.html" class="next">Next &raquo;</a>
+		</div>
+	</center>
+
+	<footer>
+	<p>All right reserved by Nur Amni Amirah,2025</p>
+	
+	<hr>
+	<p>Disclaimer & Copyright: This site is an individual project created for learning and demonstration purpose only.</p>
+	<p>Last Updated June 11,2025</p>
+</footer>
+</body>
+</html>
