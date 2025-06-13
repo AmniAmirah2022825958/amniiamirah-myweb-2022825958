@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My Personal Websites</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		body {
+			font-family:Roboto, sans-serif;
+			margin:0;
+			padding:0;
+			display:flex;
+			flex-direction:column;
+			min-height:100vh;
+		}
+		header {
+			background-color:#004369;
+			color:white;
+			padding:05px;
+			text-align:center;
+		}
+		nav {
+			text-align:center;
+			margin:20px 0;
+		}
+		nav a {
+			margin:0 15px;
+			text-decoration:none;
+			color:#4980AA;
+			font-weight:bold;
+		}
+		section {
+			padding:20px;
+			margin:20px auto;
+			max-width:800px;
+			border:1px solid #FFFFFF;
+			border-radius:5px;
+			background-color:#FFFFFF;
+		}
+		img {
+  			border:5px solid #E5DDC8;
+  			display:block;
+  			margin-left:auto;
+ 			margin-right:auto;
+ 			float:left;
+		}
+ 		table {
+			font-family:arial,sans-serif;
+			border-collapse:collapse;
+			text-align:center;
+			width:50%;
+		}
+		td,th {
+			border:1px solid #000000;
+			text-align:center;
+			padding:8px;
+		}	
+		tr:hover {
+			background color:#4980AA;
+		}
+		footer {
+			text-align:center;
+			padding:06px;
+			background-color:#004369;
+			color:white;
+			bottom:0;
+			width:100%;
+		}
+		@keyframes slideRightToLeft {
+			0% {
+				transform:translateX(100%);
+			}
+			100% {
+				transform:translateX(-100%);
+			}
+		}
+		.animated-text {
+			white-space:nowrap;
+			display:inline-block;
+			animation:slideRightToLeft 5s linear infinite;
+			font-size:24px;
+			color:#000000;
+		}
+		.text-container {
+			overflow:hidden;
+			width:100%;
+			border:1px solid #ddd;
+			padding:10px;
+		}
+		a {
+			text-decoration:none;
+			display:inline-block;
+			padding:8px 16px;
+		}
+		a:hover {
+			background-color:#4980AA;
+			color:#FFFFFF;
+		}
+		.bottom-buttons {
+			margin-top:auto;
+			display:flex;
+			justify-content:center;
+			gap:20px;
+			padding:20px;
+		}
+		.previous, .next{
+			background-color:#ddd;
+			color:#004369;
+			padding: 10px 20px;
+			text-decoration:none;
+			border-radius:5px;
+			font-weight:bold;
+			transition:0.3s ease;
+		}
+		.previous:hover, .next:hover {
+			background-color:#4980AA;
+			color:white;
+		}
+		.container {
+  			display: flex;
+  			flex-wrap: wrap;
+  			gap: 20px;
+  			justify-content: space-around;
+		}
+		.card {
+  			flex: 1 1 300px;
+  			background-color:#FFFFFF;
+  			border-radius:15px;
+  			padding:20px;
+  			margin:20px auto;
+  			max-width:600px;
+  			box-shadow:2px 8px 12px rgba(0, 0, 0, 0.4);
+  			text-align:center;
+		}
+		a {
+  			text-decoration: none;
+			color: #007BFF;
+			transition: color 0.3s, transform 0.3s;
+		}
+		a.active hover {
+  			color:#004369;
+  			transform: scale(1.05);
+		}
+	tr:hover {background-color:#c6d9e7;}	
+	</style>
+</head>
+<body>
+	<header style="background-color: #004369; color: white; padding: 05px; text-align: center;">
+  		<h1 id="typing"></h1>
+	</header>
+
+	<script>
+  		const text = "WELCOME TO MY PERSONAL WEBSITE";
+  		let i = 0;
+  		function typeWriter() {
+    	if (i < text.length) {
+      	document.getElementById("typing").innerHTML += text.charAt(i);
+      	i++;
+      	setTimeout(typeWriter, 100);
+    	}
+  	}
+  	typeWriter();
+	</script>
+
+	<div class="navbar">
+		<ul>
+				<li><a href="index.html">About Me</a></li>
+				<li><a href="biodata.html">Biodata</a></li>
+				<li><a href="experience.html">Experience</a></li>
+				<li><a href="education.html">Education</a></li>
+				<li><a href="family.html">Family</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<br>
+<center>
+<table style="text-align:center; font:arial; width:50%;">
+	<tr>
+		<th style="width:20%">Full Name</th>
+		<td>Nur Amni Amirah binti Mohd Manzul</td>
+	</tr>
+
+	<tr>
+		<th style="width:20%">Date of Birth</th>
+		<td>02.03.2004</td>
+	</tr>
+
+	<tr>
+		<th style="width:20%">Age</th>
+		<td>21 Years Old</td>
+	</tr>
+
+	<tr>
+		<th style="width:20%">Gender</th>
+		<td>Female</td>
+	</tr>
+
+	<tr>
+		<th style="width:20%">Nationality</th>
+		<td>Malaysian</td>
+	</tr>
+
+	<tr>
+		<th style="width:20%">Race</th>
+		<td>Malay</td>
+	</tr>
+
+	<tr>
+		<th style="width:20%">Religion</th>
+		<td>Islam</td>
+	</tr>
+
+	<tr>
+		<th style="width:20%">Ambition</th>
+		<td>Lecturer</td>
+	</tr>
+
+	<tr>
+		<th style="width:20%">Hobby</th>
+		<td>Cooking and Baking</td>
+	</tr>
+
+	<tr>
+		<th style="width:20%">Email</th>
+		<td>the.amniamirah@gmail.com</td>
+	</tr>
+
+	<tr>
+		<th style="width:20%">State</th>
+		<td>Kota Bharu</td>
+	</tr>
+
+	<tr>
+		<th style="width:20%">City</th>
+		<td>Kelantan</td>
+	</tr>
+</table>
+</center>
+<br>
+	<section>
+	<div class="card">
+		<h4 style="font-family:Arial; color:#004369;"><u>My Playlist Speak For Me</u></h4>
+		<ol>
+			<li><a href="https://youtu.be/VuNIsY6JdUw?si=5zitiTdhm1WUv3R2">You Belong With Me - Taylor Swift</a></li>	
+			<li><a href="https://youtu.be/o_1aF54DO60?si=oyp1Wr7G8PGRyasX">Young and Beautiful - Lana Del Rey</a></li>	
+			<li><a href="https://youtu.be/uuZE_IRwLNI?si=QSgJFG8Coxhmy0EB">Mirrors - Justin Timberlake</a></li>	
+			<li><a href="https://youtu.be/rtOvBOTyX00?si=fA8MYGXvTEMxhVfm">A Thousand Years - Christina Perri</a></li>	
+			<li><a href="https://youtu.be/I0czvJ_jikg?si=CFLhvSR4blHpw3Jf">Be Alright - Dean Lewis</a></li>	
+		</ol></div>
+	
+	<div class="card">
+			<a href="https://youtu.be/ThkYu7463-w?si=_MeD3Kvd7bkoclMD" target="_blank" rel="noopener noreferrer">
+		  	<img src="image/thumbnail.jpg" alt="Watch on YouTube" width="400px">
+			</a>
+			<h4 style="font-family:Roboto; color:#004369;">My Favourite YouTube Channel:<a href="https://www.youtube.com/@ElRiss" style="color:#004369"><i>Ai El Riss</i></a></h4>
+			</div>
+	</section>
+<br>
+	<center>
+		<div class="bottom-buttons">
+		<a href="index.html" class="previous">&laquo; Previous</a>
+		<a href="experience.html" class="next">Next &raquo;</a>
+		</div>
+	</center>
+<br>
+
+<footer>
+	<p>All right reserved by Nur Amni Amirah,2025</p>
+	
+	<hr>
+	<p>Disclaimer & Copyright: This site is an individual project created for learning and demonstration purpose only.</p>
+	<p>Last Updated June 11,2025</p>
+</footer>
+</body>
+</html>
